@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* header */
+.clip-map {
+  clip-path: polygon(0 0, 100% 0, 59% 100%, 0% 100%);
+}
+
+.filter-nashid {
+  filter: brightness(1);
+}
