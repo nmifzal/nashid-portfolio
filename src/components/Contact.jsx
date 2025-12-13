@@ -1,4 +1,4 @@
-import { Linkedin, Mail, Phone } from 'lucide-react'
+import { Linkedin, Mail } from 'lucide-react'
 import Section from './Section'
 
 const Contact = () => {
@@ -22,9 +22,6 @@ const Contact = () => {
             <div className="flex gap-6">
                 <a href="https://www.linkedin.com/in/nmifzal" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                     <Linkedin size={18} /> LinkedIn
-                </a>
-                <a href="tel:+919500765068" className="hover:text-primary transition-colors flex items-center gap-2">
-                    <Phone size={18} /> +91-9500765068
                 </a>
             </div>
             <p className="mt-8">Designed & Built by Mohammed Nashid Mifzal P</p>
