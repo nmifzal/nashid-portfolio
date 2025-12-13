@@ -51,11 +51,11 @@ const TiltCard = ({ tech }) => {
             }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative w-full aspect-square bg-[#112240] rounded-xl flex flex-col items-center justify-center cursor-pointer group"
+            className="relative w-full aspect-square bg-white/5 backdrop-blur-sm rounded-xl flex flex-col items-center justify-center cursor-pointer group"
         >
-            {/* Embossed Border Effect */}
+            {/* Glass Border & Highlight */}
             <div 
-                className="absolute inset-0 rounded-xl border border-white/10 shadow-[inner_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none"
+                className="absolute inset-0 rounded-xl border border-white/10 shadow-[inset_0_0_20px_rgba(255,255,255,0.05)] pointer-events-none group-hover:border-primary/30 transition-colors duration-300"
                 style={{ transform: "translateZ(20px)" }}
             ></div>
             

@@ -54,7 +54,7 @@ const Experience = () => {
                         <span className="font-mono text-xs text-gray-500 mt-1 sm:mt-0">{exp.period}</span>
                     </div>
 
-                    <ul className="list-disc marker:text-primary space-y-2 ml-4 text-gray-400 mb-4">
+                    <ul className="list-disc marker:text-primary space-y-2 ml-4 text-gray-400 mb-4 text-base">
                         {exp.description.map((item, i) => (
                             <li key={i}>{item}</li>
                         ))}

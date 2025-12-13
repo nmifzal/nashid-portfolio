@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-secondary min-h-screen text-text-main font-sans selection:bg-primary/30 selection:text-white relative cursor-none">
+    <div className="min-h-screen text-text-main font-sans selection:bg-primary/30 selection:text-white relative cursor-none">
       <Suspense fallback={null}>
         <Scene />
         <Cursor />

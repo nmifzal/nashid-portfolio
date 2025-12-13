@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 max-w-7xl mx-auto pt-20 relative">
-      <div className="w-full text-center">
+      <div className="w-full text-center relative z-10">
         <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-5xl font-bold text-gray-400 mb-8"
+            className="text-3xl md:text-5xl font-bold text-gray-400 mb-8"
         >
             I build things for the web & mobile.
         </motion.h2>
