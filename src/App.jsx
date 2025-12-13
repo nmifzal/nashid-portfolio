@@ -2,6 +2,7 @@ import { Suspense, useEffect, useState } from 'react'
 import Scene from './components/3d/Scene'
 import About from './components/About'
 import Contact from './components/Contact'
+import Cursor from './components/Cursor'
 import Experience from './components/Experience'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
@@ -23,9 +24,10 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-secondary min-h-screen text-text-main font-sans selection:bg-primary/30 selection:text-white relative">
+    <div className="bg-secondary min-h-screen text-text-main font-sans selection:bg-primary/30 selection:text-white relative cursor-none">
       <Suspense fallback={null}>
         <Scene />
+        <Cursor />
       </Suspense>
 
       <Navbar />

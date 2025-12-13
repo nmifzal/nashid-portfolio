@@ -1,0 +1,8 @@
+
+body {
+    cursor: none !important; /* Hide default cursor */
+}
+
+a, button {
+    cursor: none !important; /* Ensure generic pointers are hidden */
+}
