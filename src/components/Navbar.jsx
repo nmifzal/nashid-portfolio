@@ -35,7 +35,6 @@ const Navbar = () => {
               href={link.href} 
               className="text-sm font-mono hover:text-primary transition-colors"
             >
-              <span className="text-primary mr-1">0{index + 1}.</span>
               {link.name}
             </a>
           ))}

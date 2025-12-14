@@ -64,7 +64,7 @@ const TiltCard = ({ tech }) => {
                 <img 
                     src={tech.icon} 
                     alt={tech.name} 
-                    className="w-12 h-12 mb-3 grayscale group-hover:grayscale-0 transition-all duration-300 drop-shadow-lg" 
+                    className="w-12 h-12 mb-3 transition-all duration-300 drop-shadow-lg" 
                 />
                 <span className="text-gray-400 font-mono text-sm font-bold group-hover:text-primary transition-colors">
                     {tech.name}
