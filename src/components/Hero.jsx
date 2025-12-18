@@ -34,7 +34,7 @@ const Hero = () => {
         <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 3.5 }}
             className="max-w-xl mx-auto text-gray-400 text-lg mb-12 leading-relaxed"
         >
             I'm a Frontend Engineer specializing in building scalable web and mobile interfaces using <span className="text-primary">React</span>, <span className="text-primary">Angular</span>, and <span className="text-primary">Flutter</span>.
