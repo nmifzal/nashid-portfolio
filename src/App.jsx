@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import { Suspense, useEffect, useState } from 'react'
 import Scene from './components/3d/Scene'
 import About from './components/About'
@@ -5,16 +6,15 @@ import Contact from './components/Contact'
 import Cursor from './components/Cursor'
 import Experience from './components/Experience'
 import Hero from './components/Hero'
+import LoadingScreen from './components/LoadingScreen'
 import Navbar from './components/Navbar'
 import Skills from './components/Skills'
 
 function App() {
   const [isMobile, setIsMobile] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simple check to disable complex 3D on very old devices if needed, 
-    // but for now we just track resize to maybe disable particles on tiny screens?
-    // Actually, react-three fiver is efficient. Let's keep it everywhere but make sure it sits behind.
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768)
     }
@@ -25,20 +25,28 @@ function App() {
 
   return (
     <div className="min-h-screen text-text-main font-sans selection:bg-primary/30 selection:text-white relative cursor-none">
-      <Suspense fallback={null}>
-        <Scene />
-        <Cursor />
-      </Suspense>
+      <AnimatePresence>
+        {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      </AnimatePresence>
 
-      <Navbar />
-      
-      <main className="relative z-10 w-full">
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Contact />
-      </main>
+      {!isLoading && (
+        <>
+            <Suspense fallback={null}>
+                <Scene />
+                <Cursor />
+            </Suspense>
+
+            <Navbar />
+            
+            <main className="relative z-10 w-full">
+                <Hero />
+                <About />
+                <Experience />
+                <Skills />
+                <Contact />
+            </main>
+        </>
+      )}
     </div>
   )
 }
