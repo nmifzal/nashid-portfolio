@@ -18,7 +18,7 @@ const ResumeDownloadButton = () => {
 
   return (
     <button onClick={handleDownload} className="px-6 py-3 border border-primary text-primary rounded hover:bg-primary/10">
-      Download Resume
+      Resume
     </button>
   );
 };
