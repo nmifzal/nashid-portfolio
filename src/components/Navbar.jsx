@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
-
+import ResumeDownloadButton from './ResumeDownloadButton.jsx'
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
@@ -63,9 +63,7 @@ const Navbar = () => {
                         {link.name}
                     </a>
                 ))}
-                <a href="/resume.pdf" className="px-6 py-3 border border-primary text-primary rounded hover:bg-primary/10">
-                    Resume
-                </a>
+                <ResumeDownloadButton />
             </div>
         )}
       </div>
